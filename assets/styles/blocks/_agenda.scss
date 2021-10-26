@@ -1,0 +1,225 @@
+.agenda {
+  background: $color-7;
+  z-index: 2;
+  position: relative;
+  transition: $transition-gradient;
+
+  &.section-bg-green {
+    background: $color-8;
+    transition: $transition-gradient;
+
+    .agenda-top__content .agenda-block .agenda-item {
+      border-top: 2px solid $color-2;
+
+      &:last-of-type {
+        border-bottom: 2px solid $color-2;
+      }
+    }
+
+    .agenda-item__time_mobile {
+      color: $color-4;
+    }
+
+    .agenda-info {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p,
+      ul,
+      ol {
+        color: $color-2;
+      }
+    }
+
+    .agenda-top__title {
+      h4,
+      h5,
+      p,
+      ul,
+      ol {
+        color: $color-2;
+      }
+
+      .btn-outline {
+        &:hover {
+          color: $color-3;
+        }
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+    padding: 20px 20px 0;
+    margin: 0 auto;
+
+    @media (min-width: $bp-M) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $bp-L) {
+      padding: 0;
+    }
+  }
+
+  &-top {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: $bp-L) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (min-width: $bp-4XL) {
+      grid-template-columns: minmax(auto, 825px) calc(45% - 18px);
+    }
+
+    &__image {
+      text-align: center;
+      max-width: 590px;
+      margin: 0 auto 40px;
+      width: 100%;
+      height: auto;
+
+      @media (min-width: $bp-L) {
+        flex-basis: 50%;
+        margin: 0;
+        max-width: none;
+      }
+
+      @media (min-width: $bp-L) {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &__content {
+      @media (min-width: $bp-L) {
+        flex-basis: 50%;
+      }
+
+      &-wrap {
+        @media (min-width: $bp-L) {
+          max-width: 762px;
+        }
+      }
+
+      .agenda-block {
+        padding-bottom: 15px;
+
+        .agenda-item {
+          border-top: 2px solid $color-1;
+          padding: 10px 0 8px;
+          display: flex;
+          flex-direction: column;
+
+          @media (min-width: $bp-M) {
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: flex-start;
+          }
+
+          @media (min-width: $bp-L) {
+            padding: 14px 0;
+          }
+
+          &:last-of-type {
+            border-bottom: 2px solid $color-1;
+          }
+
+          &__left {
+            padding-right: 15px;
+
+            @media (min-width: $bp-L) {
+              padding-right: 35px;
+            }
+
+            .agenda-title {
+              color: $color-6;
+            }
+          }
+
+          &__time {
+            min-width: 200px;
+            color: $color-4;
+            display: none;
+
+            @media (min-width: $bp-M) {
+              display: block;
+              padding-top: 11px;
+              text-align: right;
+
+              &_mobile {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__title {
+      padding-bottom: 15px;
+
+      h2,
+      h3 {
+        color: $color-4;
+        padding-bottom: 15px;
+
+        @media (min-width: $bp-L) {
+          padding-bottom: 50px;
+        }
+      }
+
+      @media (min-width: $bp-L) {
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  &-left {
+    .multiple-info-top__image {
+      @media (min-width: $bp-5XL) {
+        flex-basis: 50%;
+      }
+    }
+
+    .agenda-top__content {
+      @media (min-width: $bp-L) {
+        padding: 30px 40px 0 80px;
+      }
+
+      @media (min-width: $bp-5XL) {
+        padding: 30px 123px 0 80px;
+      }
+    }
+  }
+
+  &-right {
+    flex-direction: row-reverse;
+
+    .agenda-top__content {
+      @media (min-width: $bp-L) {
+        padding: 30px 80px 0 80px;
+      }
+
+      @media (min-width: $bp-5XL) {
+        padding: 30px 80px 0 120px;
+      }
+
+      &-wrap {
+        @media (min-width: $bp-L) {
+          margin-right: 0;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

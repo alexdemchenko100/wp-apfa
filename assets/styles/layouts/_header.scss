@@ -1,0 +1,148 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  background-color: transparent;
+  transition: $transition-ease;
+
+  @media (max-width: $bp-L - 1px) {
+    max-height: 100vh;
+  }
+
+  &.open {
+    @media (max-width: $bp-L - 1px) {
+      background-color: $color-8;
+      height: 100vh;
+    }
+  }
+
+  &__container {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (min-width: $bp-L) {
+      padding-left: 24px;
+      padding-right: 24px;
+      max-width: 1778px;
+      margin: 0 auto;
+      align-items: flex-end;
+      position: static;
+    }
+
+    @media (min-width: $bp-2XL) {
+      padding-left: 37px;
+      padding-right: 37px;
+    }
+  }
+
+  &__top {
+    padding-top: 4px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    @media (min-width: $bp-L) {
+      padding-top: 18px;
+    }
+  }
+
+  &__bottom {
+    padding-left: 24px;
+    padding-bottom: 26px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+
+    @media (min-width: $bp-L) {
+      display: none;
+    }
+  }
+
+  &__brand {
+    margin-left: 8px;
+    width: 100%;
+    max-width: 130px;
+    max-height: 75px;
+    object-fit: contain;
+    position: relative;
+
+    @media (min-width: $bp-L) {
+      max-width: 138px;
+      max-height: 80px;
+
+      &:hover {
+        .hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    @media (min-width: $bp-2XL) {
+      margin: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .hover {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      transition: $transition-ease;
+    }
+  }
+
+  &__nav {
+    @media (max-width: $bp-L - 1px) {
+      padding: 11px 0 0;
+      margin: 0;
+      width: 100%;
+      max-height: 100vh;
+      align-items: flex-start;
+      overflow-y: auto;
+      transition: $transition-ease;
+    }
+
+    &.nav-show {
+      .header__bottom {
+        display: block;
+
+        @media (min-width: $bp-L) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+body {
+  &.logged-in.admin-bar {
+    .header {
+      top: 46px;
+
+      @media (min-width: 783px) {
+        top: 32px;
+      }
+    }
+  }
+}

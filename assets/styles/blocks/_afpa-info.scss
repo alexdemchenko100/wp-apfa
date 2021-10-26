@@ -1,0 +1,79 @@
+.afpa-info {
+  padding: 76px 20px 73px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("../../images/about-afpa.jpeg");
+    background-size: cover;
+  }
+
+  @media (min-width: $bp-2XL) {
+    padding: 126px 20px 106px;
+  }
+
+  @media (min-width: $bp-5XL) {
+    padding: 217px 20px 110px;
+  }
+
+  &__container {
+    position: relative;
+    z-index: 2;
+
+    @media (min-width: $bp-S) {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    @media (min-width: $bp-L) {
+      padding-left: 27px;
+      padding-right: 27px;
+    }
+
+    @media (min-width: $bp-XL) {
+      max-width: 1055px;
+    }
+
+    @media (min-width: $bp-3XL) {
+      max-width: 1460px;
+    }
+
+    @media (min-width: $bp-5XL) {
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+  }
+
+  h5 {
+    color: $color-2;
+
+    @media (min-width: $bp-2XL) {
+      padding-bottom: 18px;
+    }
+
+    @media (min-width: $bp-5XL) {
+      padding-bottom: 20px;
+    }
+  }
+
+  h3 {
+    color: $color-4;
+    padding-top: 12px;
+    margin-bottom: 40px;
+    font-weight: 700;
+
+    @media (min-width: $bp-2XL) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $bp-5XL) {
+      margin-bottom: 40px;
+    }
+  }
+}

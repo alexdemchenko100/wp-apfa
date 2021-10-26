@@ -1,0 +1,246 @@
+/* stylelint-disable */
+
+.sm {
+  padding: 50px 0;
+  position: relative;
+  z-index: 1;
+  transition: $transition-gradient;
+
+  @media (min-width: $bp-M) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $bp-L) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: $bp-XL) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $bp-3XL) {
+    padding-top: 124px;
+    padding-bottom: 124px;
+  }
+
+  &__container {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1760px;
+
+    @media (min-width: $bp-M) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  &__videos {
+    padding: 0;
+
+    .video-block {
+      padding-bottom: 66.2%;
+      padding-top: 0;
+
+      @media (min-width: $bp-M) {
+        padding-bottom: 33.1%;
+        padding-top: 0;
+      }
+
+      &__title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 900;
+        color: $color-2;
+        z-index: 1;
+        text-align: center;
+
+        @media (min-width: $bp-M) {
+          margin-top: 18px;
+        }
+
+        a {
+          color: $color-2;
+        }
+      }
+
+      &__subtitle {
+        margin: 0;
+      }
+
+      svg {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__row {
+    @media (min-width: $bp-L) {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(2, calc(50% - 15px));
+    }
+  }
+
+  &__content {
+    a {
+      color: $color-4;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__top {
+    padding-bottom: 64px;
+
+    @media (min-width: $bp-XL) {
+      padding-bottom: 80px;
+    }
+
+    h4 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__tag {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    @media (min-width: $bp-L) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $bp-3XL) {
+      margin-bottom: 55px;
+    }
+
+    h5 {
+      margin-bottom: 0;
+      margin-right: 10px;
+
+      @media (min-width: $bp-L) {
+        margin-right: 30px;
+      }
+
+      @media (min-width: $bp-3XL) {
+        margin-right: 53px;
+      }
+    }
+  }
+
+  &-item {
+    padding-bottom: 66.2%;
+    padding-top: 0;
+    flex-basis: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    @media (min-width: $bp-M) {
+      padding-bottom: 33.1%;
+      padding-top: 0;
+    }
+
+    @media (min-width: $bp-M) {
+      flex-basis: 50%;
+    }
+
+    &__wrap {
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__container {
+      padding: 20px;
+
+      @media (min-width: $bp-S) {
+        padding: 40px;
+        max-width: 652px;
+      }
+    }
+
+    &__content {
+      h4 {
+        margin-bottom: 16px;
+
+        @media (max-width: $bp-S - 1px) {
+          font-size: rem(14);
+          line-height: rem(24);
+        }
+
+        @media (min-width: $bp-SM) {
+          margin-bottom: 24px;
+        }
+
+        @media (min-width: $bp-XL) {
+          margin-bottom: 55px;
+          margin-top: 32px;
+        }
+      }
+    }
+
+    h4,
+    p {
+      color: $color-2 !important;
+    }
+  }
+
+  &.green {
+    background: $color-8;
+    transition: $transition-ease;
+
+    h2,
+    h3,
+    h4:not(.video-block__title),
+    p {
+      color: $color-2;
+    }
+  }
+
+  &.white {
+    background: $color-7;
+    transition: $transition-ease;
+
+    h2,
+    h3,
+    h4:not(.video-block__title),
+    p {
+      color: $color-8;
+    }
+  }
+
+  h5,
+  a.socials__link {
+    color: $color-4;
+  }
+
+  .socials {
+    a {
+      @media (min-width: $bp-L) {
+        margin-right: 32px;
+      }
+    }
+  }
+}
+/* stylelint-enable */

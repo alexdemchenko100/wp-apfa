@@ -1,0 +1,134 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(180deg, rgba($color-8, 1) 0%, rgba($color-8, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+  }
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* stylelint-disable */
+    background: linear-gradient(90deg, rgba($color-8, 0.5) 0%, rgba($color-10, 0.17) 49%, rgba($color-8, 0.5) 95%);
+    /* stylelint-enable */
+    mix-blend-mode: multiply;
+    z-index: -1;
+  }
+
+  &__container {
+    padding: 29px 20px 64px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1778px;
+    height: 100vh;
+    min-height: 573px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+
+    @media (min-width: $bp-M) {
+      padding-top: 60px;
+      padding-bottom: 100px;
+      min-height: 676px;
+    }
+
+    @media (min-width: $bp-L) {
+      padding-bottom: 120px;
+      min-height: 768px;
+    }
+
+    @media (min-width: $bp-2XL) {
+      padding: 60px 50px 172px;
+    }
+
+    @media (min-width: $bp-3XL) {
+      min-height: 900px;
+    }
+
+    h1,
+    h2 {
+      margin-bottom: 0;
+      color: $color-2;
+      max-width: 700px;
+
+      @media (min-width: $bp-XL) {
+        max-width: 1000px;
+      }
+
+      @media (min-width: $bp-2XL) {
+        max-width: 1260px;
+      }
+    }
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .video-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-video-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    video {
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  &__scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    @media (min-width: $bp-M) {
+      bottom: 40px;
+    }
+
+    @media (min-width: $bp-L) {
+      bottom: 70px;
+      left: 23px;
+    }
+
+    @media (min-width: $bp-2XL) {
+      bottom: 109px;
+      left: 50px;
+    }
+
+    a {
+      display: block;
+    }
+  }
+}

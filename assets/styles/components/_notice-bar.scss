@@ -1,0 +1,59 @@
+.noticebar {
+  padding: 7px 30px 5px;
+  width: 100%;
+  background-color: $color-4;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: none;
+  text-align: center;
+
+  &__close {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+  }
+
+  &__content {
+    * {
+      margin: 0;
+      color: $color-2;
+    }
+
+    p {
+      font-family: $font-base;
+      font-weight: 400;
+      font-size: rem(14);
+      line-height: rem(22);
+
+      @media (min-width: $bp-L) {
+        font-size: rem(16);
+        line-height: rem(30);
+      }
+    }
+
+    a {
+      font-weight: 400;
+      position: relative;
+      transition: $transition-ease;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        bottom: 1px;
+        position: absolute;
+        left: 0;
+        background-color: rgba($color-2, 0.3);
+        transition: $transition-ease;
+      }
+
+      &:hover {
+        &::after {
+          background-color: rgba($color-2, 1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+/** Import Bootstrap functions */
+/* stylelint-disable */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+//Import Fonts
+@import url("https://use.typekit.net/usq5oym.css");
+
+//Responsive
+$bp-MS:  375px;
+$bp-S:   425px;
+$bp-SM:  550px;
+$bp-M:   768px;
+$bp-ML:  834px;
+$bp-L:   992px;
+$bp-XL:  1200px;
+$bp-2XL: 1366px;
+$bp-3XL: 1440px;
+$bp-4XL: 1600px;
+$bp-5XL: 1920px;
+$bp-6XL: 2400px;
+
+//Colors
+$color-1:       #000;
+$color-2:       #fff;
+$color-3:       #0E6322;
+$color-4:       #80B751;
+$color-5:       #387EFC;
+$color-6:       #E2AC33;
+$color-7:       #FBF7EE;
+$color-8:       #1E2D24;
+$color-9:       #ff5100;
+$color-10:      #D5A021;
+$color-primary: $color-3;
+
+//Fonts
+$font-interstate: interstate, sans-serif;
+$font-museo-sans: museo-sans, sans-serif;
+$font-base:       $font-interstate;
+
+//Transition
+$transition-gradient: all 1s cubic-bezier(0.4,0,.2,1);
+$transition-ease: all 0.3s ease-in-out;
+$transition-linear: all 0.3s linear;

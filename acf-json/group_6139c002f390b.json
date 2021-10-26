@@ -1,0 +1,23 @@
+{
+    "key": "group_6139c002f390b",
+    "title": "Block: AFPA Info",
+    "fields": [],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/afpa-info"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Settings in Options -> Info Tab",
+    "modified": 1631530353
+}

@@ -1,0 +1,237 @@
+/* stylelint-disable */
+
+.cta {
+  &__rows {
+    @media (min-width: $bp-M) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &.full {
+      @media (min-width: $bp-M) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &-item {
+    padding: 70px 21px 57px 20px;
+    background-size: auto 140%;
+    background-position: 45% 100%;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: $bp-S) {
+      background-size: cover;
+      background-position: center bottom !important;
+    }
+
+    @media (min-width: $bp-L) {
+      padding: 120px 35px;
+    }
+
+    @media (min-width: $bp-2XL) {
+      padding: 82px 35px;
+    }
+
+    @media (min-width: $bp-3XL) {
+      background-position: center !important;
+    }
+
+    @media (min-width: $bp-5XL) {
+      padding: 232px 86px;
+    }
+
+    &.full {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      @media (min-width: $bp-SM) {
+        background-size: cover;
+        background-position: center !important;
+      }
+
+      @media (min-width: $bp-2XL) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+      }
+
+      @media (min-width: $bp-5XL) {
+        padding-top: 266px;
+        padding-bottom: 266px;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba($color-8, 0.55);
+      z-index: -1;
+      mix-blend-mode: multiply;
+    }
+
+    &__container {
+      margin: 0 auto;
+      padding-top: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @media (min-width: $bp-S) {
+        max-width: 400px;
+      }
+
+      @media (min-width: $bp-L) {
+        padding-left: 27px;
+        padding-right: 27px;
+        max-width: 594px;
+      }
+
+      @media (min-width: $bp-2XL) {
+        padding-top: 10px;
+      }
+
+      @media (min-width: $bp-4XL) {
+        max-width: 712px;
+      }
+
+      @media (min-width: $bp-5XL) {
+        padding-top: 30px;
+        padding-left: 34px;
+        padding-right: 34px;
+        max-width: 787px;
+      }
+
+      &.full {
+        @media (min-width: $bp-S) {
+          max-width: 1000px;
+        }
+
+        @media (min-width: $bp-XL) {
+          max-width: 1055px;
+        }
+
+        @media (min-width: $bp-3XL) {
+          max-width: 1460px;
+        }
+      }
+    }
+
+    &__info {
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+        margin-bottom: 20px;
+        color: $color-2;
+
+        @media (min-width: $bp-2XL) {
+          margin-bottom: 39px;
+        }
+
+        a {
+          color: $color-2;
+          transition: $transition-ease;
+          word-break: break-all;
+
+          &:hover {
+            color: $color-4;
+          }
+        }
+      }
+
+      h3 {
+        margin-bottom: 40px;
+      }
+    }
+
+    &.bg {
+      .cta-item__container {
+        padding: 24px 17px 20px;
+        background-color: $color-8;
+        border-radius: 10px;
+
+        @media (min-width: $bp-2XL) {
+          padding: 46px 37px 40px 35px;
+        }
+
+        @media (min-width: $bp-5XL) {
+          padding: 66px 55px 65px 56px;
+        }
+
+        p {
+          letter-spacing: 0;
+
+          &.info {
+            @media (min-width: $bp-5XL) {
+              margin-bottom: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    img {
+      margin-bottom: 20px;
+      display: inline-block;
+      max-width: 206px;
+      min-width: 156px;
+
+      @media (min-width: $bp-2XL) {
+        margin-bottom: 39px;
+        max-width: 290px;
+      }
+    }
+
+    p {
+      letter-spacing: 0;
+
+      &.tag {
+        @extend .h5;
+
+        margin-bottom: 20px;
+        color: $color-4;
+        text-transform: uppercase;
+
+        @media (min-width: $bp-2XL) {
+          margin-bottom: 39px;
+        }
+
+        @media (min-width: $bp-5XL) {
+          margin-bottom: 26px;
+        }
+      }
+
+      &.sub {
+        @extend .h6;
+
+        margin-bottom: 40px;
+        color: $color-2;
+
+        @media (min-width: $bp-2XL) {
+          font-size: rem(14);
+          line-height: rem(24);
+          letter-spacing: 1.68px;
+        }
+
+        @media (min-width: $bp-5XL) {
+          margin-bottom: 31px;
+        }
+
+        &.full {
+          @media (min-width: $bp-5XL) {
+            margin-bottom: 42px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* stylelint-enable */

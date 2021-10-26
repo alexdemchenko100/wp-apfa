@@ -1,0 +1,313 @@
+.news-archive {
+  background-color: $color-7;
+
+  &__container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 40px 20px 24px;
+
+    @media (min-width: $bp-L) {
+      padding: 80px 40px 74px;
+    }
+
+    @media (min-width: $bp-2XL) {
+      padding-left: 76px;
+      padding-right: 76px;
+    }
+
+    @media (min-width: $bp-5XL) {
+      padding-top: 100px;
+      padding-bottom: 112px;
+    }
+  }
+
+  &__header {
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (min-width: $bp-M) {
+      padding-bottom: 40px;
+      max-width: 1110px;
+    }
+
+    @media (min-width: $bp-4XL) {
+      padding-bottom: 80px;
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin-left: 0;
+      background: transparent;
+      border: 2px solid $color-8;
+      border-radius: 10px;
+      padding: 13px 45px 13px 13px;
+      font-family: $font-base;
+      font-weight: 700;
+      font-size: rem(12);
+      line-height: rem(16);
+      letter-spacing: 0.12em;
+      position: relative;
+      cursor: pointer;
+      transition: $transition-ease;
+      z-index: 4;
+
+      @media (min-width: $bp-XL) {
+        font-size: rem(16);
+        line-height: rem(26);
+      }
+
+      option {
+        color: $color-1;
+      }
+    }
+
+    .news-select {
+      position: relative;
+      margin-left: auto;
+      border-radius: 10px;
+      transition: $transition-ease;
+
+      &::before {
+        position: absolute;
+        content: '';
+        z-index: 2;
+        top: 14px;
+        right: 23px;
+        background: url("../../images/arrow-bottom.svg");
+        width: 12px;
+        height: 17px;
+        transition: $transition-ease;
+
+        @media (min-width: $bp-XL) {
+          top: 20px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        z-index: 2;
+        top: 20px;
+        right: 15px;
+        background: url("../../images/hover.svg");
+        width: 28px;
+        height: 12px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotate(90deg);
+        opacity: 0;
+        transition: $transition-ease;
+
+        @media (min-width: $bp-XL) {
+          width: 30px;
+          height: 15px;
+          right: 14px;
+        }
+      }
+
+      &:hover {
+        background-color: $color-8;
+
+        &::before {
+          opacity: 0;
+        }
+
+        &::after {
+          opacity: 1;
+        }
+
+        select {
+          color: $color-2;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    min-width: 163px;
+  }
+
+  &__wrap {
+    .post {
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 10px;
+
+        @media (min-width: $bp-M) {
+          flex-direction: row;
+          margin-bottom: 28px;
+        }
+      }
+
+      &-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (min-width: $bp-M) {
+          max-width: calc(100% - 403px);
+          margin-left: auto;
+        }
+
+        &__top {
+          @media (min-width: $bp-M) {
+            margin-top: -11px;
+          }
+        }
+      }
+
+      &-block {
+        margin: -3px auto 0;
+        padding-top: 30px;
+        padding-bottom: 28px;
+        max-width: 1000px;
+        border-top: 2px solid $color-8;
+
+        &:last-of-type {
+          border-bottom: 2px solid $color-8;
+        }
+
+        @media (min-width: $bp-L) {
+          padding-top: 25px;
+          padding-bottom: 0;
+          width: 100%;
+        }
+
+        @media (min-width: $bp-4XL) {
+          padding-top: 28px;
+          padding-bottom: 28px;
+          max-width: 1100px;
+        }
+
+        h4 {
+          margin-bottom: 10px;
+          font-weight: 700;
+          color: $color-3;
+
+          @media (min-width: $bp-L) {
+            margin-bottom: 14px;
+          }
+
+          @media (min-width: $bp-4XL) {
+            margin-bottom: 10px;
+          }
+
+          a {
+            color: $color-3;
+            transition: $transition-ease;
+
+            &:hover,
+            &:focus {
+              color: $color-8;
+            }
+          }
+        }
+      }
+
+      &-image {
+        display: block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (min-width: $bp-M) {
+          width: 386px;
+          margin-right: 30px;
+        }
+
+        @media (min-width: $bp-4XL) {
+          margin: 0;
+          height: 298px;
+        }
+
+        img {
+          width: 100%;
+          max-height: 100%;
+          opacity: 0;
+        }
+      }
+
+      &-excerpt {
+        p {
+          margin-bottom: 22px;
+
+          @media (min-width: $bp-L) {
+            margin-bottom: 85px;
+          }
+
+          @media (min-width: $bp-4XL) {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navigation {
+  margin: 0 auto;
+  padding: 57px 0 0;
+
+  @media (min-width: $bp-M) {
+    max-width: 1000px;
+  }
+
+  @media (min-width: $bp-4XL) {
+    max-width: 1110px;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    .current {
+      border-bottom: 2px solid $color-1;
+    }
+
+    a,
+    span {
+      font-family: $font-base;
+      font-weight: 700;
+      font-size: rem(12);
+      line-height: rem(16);
+      letter-spacing: 0.12em;
+      position: relative;
+      color: $color-1;
+      margin-left: 16px;
+
+      @media (min-width: $bp-XL) {
+        font-size: rem(16);
+        line-height: rem(26);
+      }
+    }
+
+    .next,
+    .prev {
+      width: 44px;
+      height: 44px;
+      opacity: 1;
+      border-radius: 100%;
+      background-image: url("../../images/sponsor-arrow.svg");
+      background-size: contain;
+      background-position: center;
+      color: transparent;
+      margin-top: -11px;
+    }
+
+    .next {
+      transform: rotate(180deg);
+    }
+  }
+}

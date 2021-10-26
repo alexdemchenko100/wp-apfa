@@ -1,0 +1,159 @@
+.ob {
+  padding: 0;
+  background-color: $color-7;
+  position: relative;
+  z-index: 1;
+
+  &.last {
+    padding-bottom: 60px;
+
+    @media (min-width: $bp-2XL) {
+      padding-bottom: 104px;
+    }
+  }
+
+  &-top {
+    padding-top: 58px;
+
+    @media (min-width: $bp-M) {
+      padding-top: 64px;
+      display: grid;
+      grid-gap: 30px;
+      align-items: flex-start;
+      grid-template-columns: calc(50% - 15px) calc(50% - 15px);
+    }
+
+    @media (min-width: $bp-2XL) {
+      padding-top: 136px;
+      grid-gap: 30px;
+    }
+
+    h4 {
+      margin-bottom: 20px;
+
+      @media (min-width: $bp-2XL) {
+        margin-bottom: 48px;
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    &__content {
+      @media (min-width: $bp-4XL) {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  &-data {
+    padding-top: 40px;
+
+    @media (min-width: $bp-2XL) {
+      padding-top: 87px;
+    }
+
+    &__rows {
+      @media (min-width: $bp-M) {
+        column-count: 2;
+        column-gap: 20px;
+      }
+
+      @media (min-width: $bp-2XL) {
+        column-gap: 38px;
+      }
+    }
+
+    &__row {
+      padding-bottom: 20px;
+      break-inside: avoid;
+
+      @media (min-width: $bp-2XL) {
+        padding-bottom: 42px;
+      }
+
+      &:last-of-type {
+        padding-bottom: 0;
+
+        @media (min-width: $bp-M) {
+          padding-bottom: 20px;
+        }
+
+        @media (min-width: $bp-2XL) {
+          padding-bottom: 42px;
+        }
+      }
+    }
+  }
+
+  &-title {
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid;
+
+    @media (min-width: $bp-2XL) {
+      margin-bottom: 35px;
+      padding-bottom: 11px;
+    }
+  }
+
+  &-note {
+    padding-top: 20px;
+
+    @media (min-width: $bp-2XL) {
+      padding-top: 45px;
+    }
+  }
+
+  &-name,
+  &-link {
+    @extend .h4;
+
+    margin-bottom: 5px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: $color-3;
+
+    @media (min-width: $bp-2XL) {
+      margin-bottom: 8px;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  &-pos {
+    @extend .h5;
+
+    margin-bottom: 0;
+  }
+
+  &-link {
+    display: inline-block;
+    transition: $transition-ease;
+
+    &:hover {
+      color: $color-6;
+    }
+  }
+
+  &__container {
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1760px;
+
+    @media (min-width: $bp-M) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    //
+    //@media (min-width: $bp-2XL) {
+    //  padding-left: 80px;
+    //  padding-right: 80px;
+    //}
+    //
+    //@media (min-width: $bp-4XL) {
+    //  padding-left: 40px;
+    //  padding-right: 40px;
+    //}
+  }
+}

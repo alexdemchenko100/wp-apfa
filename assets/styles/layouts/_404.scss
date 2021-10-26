@@ -1,0 +1,84 @@
+.error404,
+.search {
+  background-color: $color-8;
+  display: block;
+
+  #breadcrumbs {
+    padding: 70px 15px 10px;
+
+    @media (min-width: $bp-M) {
+      padding: 70px 30px 10px;
+    }
+  }
+
+  .site-content {
+    margin: 0;
+
+    .content-area,
+    .site-main {
+      height: 100%;
+    }
+
+    .page-title {
+      color: $color-6;
+      padding: 0 15px;
+      text-align: center;
+    }
+
+    .not-found {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 600px;
+      padding: 40px 0;
+      position: relative;
+
+      @media (min-width: $bp-L) {
+        min-height: 100vh;
+      }
+    }
+
+    .search-wrap {
+      position: relative;
+    }
+
+    .afpa-bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../../images/afpa-main.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      opacity: 0.2;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        /* stylelint-disable */
+        background: linear-gradient(180deg, rgba($color-8, 1) 0%, rgba($color-8, 1) 31.8%, rgba($color-8, 0) 63.02%, rgba($color-8, 1) 100%);
+        /* stylelint-enable */
+      }
+    }
+  }
+}
+
+body {
+  &.logged-in.admin-bar {
+    .not-found {
+      @media (min-width: $bp-L) {
+        min-height: calc(100vh - 32px);
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.page-breadcrumbs {
+  margin-bottom: 20px;
+
+  @media (min-width: $bp-L) {
+    margin-bottom: 39px;
+  }
+
+  a,
+  span {
+    font-family: $font-base;
+    font-weight: 700;
+    font-size: rem(12);
+    line-height: rem(16);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    @media (min-width: $bp-L) {
+      font-size: rem(16);
+      line-height: rem(26);
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  span {
+    color: $color-2;
+  }
+
+  a {
+    color: $color-2;
+    transition: $transition-ease;
+
+    &:hover {
+      color: $color-4;
+    }
+  }
+}

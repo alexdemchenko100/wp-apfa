@@ -1,0 +1,220 @@
+.faq {
+  background: $color-7;
+  z-index: 2;
+  position: relative;
+  transition: $transition-gradient;
+
+  &.section-bg-green {
+    background: $color-8;
+    transition: $transition-gradient;
+
+    .faq-top__content .faq-block .faq-item {
+      border-top: 2px solid $color-2;
+
+      &:last-of-type {
+        border-bottom: 2px solid $color-2;
+      }
+    }
+
+    .shown-title {
+      color: $color-4;
+    }
+
+    .faq-item__hidden {
+      h2,
+      h3,
+      h4,
+      h5,
+      p,
+      ul,
+      ol {
+        color: $color-2;
+      }
+
+      .btn-outline {
+        &:hover {
+          color: $color-3;
+        }
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+    padding: 20px 20px 0;
+    margin: 0 auto;
+
+    @media (min-width: $bp-M) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $bp-L) {
+      padding: 0;
+    }
+  }
+
+  &-top {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+
+    @media (min-width: $bp-L) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (min-width: $bp-4XL) {
+      grid-template-columns: minmax(auto, 825px) calc(45% - 18px);
+    }
+
+    &__image {
+      text-align: center;
+      max-width: 590px;
+      margin: 0 auto 40px;
+      width: 100%;
+      height: auto;
+
+      @media (min-width: $bp-L) {
+        flex-basis: 50%;
+        margin: 0;
+        max-width: none;
+      }
+
+      @media (min-width: $bp-L) {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &__content {
+      @media (min-width: $bp-L) {
+        flex-basis: 50%;
+      }
+
+      &-wrap {
+        @media (min-width: $bp-L) {
+          max-width: 762px;
+        }
+      }
+
+      .faq-block {
+        margin-top: -5px;
+
+        .faq-item {
+          border-top: 2px solid $color-1;
+          padding: 10px 0 8px;
+
+          @media (min-width: $bp-L) {
+            padding: 14px 0;
+          }
+
+          &:last-of-type {
+            border-bottom: 2px solid $color-1;
+          }
+
+          &_open {
+            .shown-icon {
+              svg {
+                transform: rotate(45deg);
+                transform-origin: center;
+              }
+            }
+          }
+
+          &__shown {
+            color: $color-3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .shown-title,
+            .shown-icon {
+              cursor: pointer;
+              margin: 0;
+
+              svg {
+                transition: $transition-ease;
+              }
+            }
+
+            .shown-title {
+              @media (min-width: $bp-2XL) {
+                font-weight: bold;
+              }
+            }
+          }
+
+          &__hidden {
+            a:not(.btn-outline) {
+              color: $color-4;
+              border-bottom: 1px solid $color-4;
+              transition: $transition-ease;
+
+              @media (min-width: $bp-L) {
+                &:hover {
+                  border-bottom: 1px solid transparent;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: rem(12);
+      line-height: rem(16);
+      color: $color-4;
+      padding-bottom: 15px;
+
+      @media (min-width: $bp-L) {
+        font-size: rem(16);
+        line-height: rem(26);
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  &-left {
+    .multiple-info-top__image {
+      @media (min-width: $bp-5XL) {
+        flex-basis: 50%;
+      }
+    }
+
+    .faq-top__content {
+      @media (min-width: $bp-L) {
+        padding: 30px 40px 0 80px;
+      }
+
+      @media (min-width: $bp-5XL) {
+        padding: 30px 123px 0 80px;
+      }
+    }
+  }
+
+  &-right {
+    flex-direction: row-reverse;
+
+    .faq-top__content {
+      @media (min-width: $bp-L) {
+        padding: 30px 80px 0 80px;
+      }
+
+      @media (min-width: $bp-5XL) {
+        padding: 30px 80px 0 120px;
+      }
+
+      &-wrap {
+        @media (min-width: $bp-L) {
+          margin-right: 0;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

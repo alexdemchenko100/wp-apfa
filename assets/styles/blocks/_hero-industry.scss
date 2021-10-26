@@ -1,0 +1,117 @@
+.industry-hero {
+  padding: 106px 20px 62px;
+  position: relative;
+  background: $color-8;
+  transition: $transition-ease;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url("../../images/pattern.jpeg");
+    mix-blend-mode: multiply;
+    background-size: cover;
+  }
+
+  @media (min-width: $bp-L) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $bp-XL) {
+    padding: 156px 40px 59px;
+  }
+
+  @media (min-width: $bp-5XL) {
+    padding: 206px 40px 110px;
+    min-height: 663px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__container {
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (min-width: $bp-5XL) {
+      width: 100%;
+    }
+  }
+
+  h5 {
+    color: $color-4;
+
+    @media (min-width: $bp-2XL) {
+      padding-bottom: 18px;
+    }
+
+    @media (min-width: $bp-5XL) {
+      padding-bottom: 25px;
+    }
+  }
+
+  h2 {
+    color: $color-2;
+
+    @media (min-width: $bp-M) {
+      padding-bottom: 30px;
+    }
+
+    @media (min-width: $bp-2XL) {
+      max-width: 83%;
+    }
+
+    @media (min-width: $bp-5XL) {
+      max-width: 74%;
+    }
+  }
+
+  .hero__scroll {
+    bottom: -47px;
+    left: 0;
+
+    @media (min-width: $bp-L) {
+      bottom: -27px;
+      left: 0;
+    }
+
+    @media (min-width: $bp-5XL) {
+      bottom: -59px;
+    }
+  }
+
+  .page-breadcrumbs {
+    a,
+    span {
+      color: $color-4;
+    }
+
+    a {
+      &:hover {
+        color: $color-2;
+      }
+    }
+  }
+}
+
+.noticebar-open {
+  transition: $transition-ease;
+
+  .industry-hero {
+    transition: $transition-ease;
+    padding: 166px 20px 62px;
+
+    @media (min-width: $bp-XL) {
+      padding: 216px 40px 59px;
+    }
+
+    @media (min-width: $bp-5XL) {
+      padding: 266px 40px 110px;
+    }
+  }
+}

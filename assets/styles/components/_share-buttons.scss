@@ -1,0 +1,29 @@
+/* stylelint-disable */
+.share-buttons {
+  .a2a_kit {
+    display: flex;
+    flex-direction: row;
+
+    a[class^= "a2a_button"] {
+      margin-right: 11px;
+      color: $color-4;
+      font-size: rem(16);
+      text-align: center;
+      transition: $transition-ease;
+
+      i {
+        font-style: normal;
+      }
+
+      &:hover {
+        color: $color-8;
+        text-decoration: none;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+/* stylelint-enable */

@@ -1,0 +1,251 @@
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+body {
+  font-family: $font-base;
+  font-weight: 400;
+}
+
+h1,
+.h1 {
+  margin-bottom: 35px;
+  font-family: $font-museo-sans;
+  font-weight: 900;
+  font-size: rem(34);
+  line-height: rem(40);
+
+  @media (min-width: $bp-L) {
+    font-size: rem(50);
+    line-height: rem(59);
+  }
+
+  @media (min-width: $bp-XL) {
+    font-size: rem(64);
+    line-height: rem(73);
+  }
+}
+
+h2,
+h1.h2 {
+  font-family: $font-museo-sans;
+  font-weight: 900;
+  font-size: rem(24);
+  line-height: rem(28);
+
+  @media (min-width: $bp-XL) {
+    font-size: rem(42);
+    line-height: rem(52);
+  }
+}
+
+h3,
+.h3 {
+  font-family: $font-museo-sans;
+  font-weight: 900;
+  font-size: rem(20);
+  line-height: rem(26);
+
+  @media (min-width: $bp-XL) {
+    font-size: rem(34);
+    line-height: rem(42);
+  }
+}
+
+h4,
+.h4 {
+  font-family: $font-base;
+  font-weight: 400;
+  font-size: rem(18);
+  line-height: rem(24);
+
+  @media (min-width: $bp-XL) {
+    font-size: rem(28);
+    line-height: rem(38);
+  }
+}
+
+h5,
+.h5 {
+  font-family: $font-base;
+  font-weight: 700;
+  font-size: rem(12);
+  line-height: rem(16);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  @media (min-width: $bp-XL) {
+    font-size: rem(16);
+    line-height: rem(26);
+  }
+}
+
+h6,
+.h6 {
+  font-family: $font-base;
+  font-weight: 700;
+  font-size: rem(10);
+  line-height: rem(14);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  @media (min-width: $bp-XL) {
+    font-size: rem(14);
+    line-height: rem(26);
+    letter-spacing: 1.68px;
+  }
+}
+
+p,
+.body {
+  font-family: $font-base;
+  font-weight: 400;
+  font-size: rem(14);
+  line-height: rem(18);
+  letter-spacing: 0.42px;
+
+  @media (min-width: $bp-XL) {
+    font-size: rem(18);
+    line-height: rem(30);
+    letter-spacing: 0;
+  }
+}
+
+ul,
+ol {
+  padding-left: 35px;
+  padding-bottom: 16px;
+  margin-bottom: 0;
+}
+
+.wp-block-spacer {
+  transition: $transition-gradient;
+  background: $color-7;
+
+  @media (max-width: $bp-L) {
+    max-height: 30px !important;
+  }
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.wp-block-image .alignleft,
+.alignleft {
+  float: left;
+}
+
+.wp-block-image .alignright,
+.alignright {
+  float: right;
+}
+
+img.alignleft,
+.wp-block-image .alignleft,
+.wp-caption.alignleft {
+  max-width: 50%;
+  height: auto;
+  margin: 10px 25px 25px 0;
+
+  @media screen and (max-width: $bp-M) {
+    max-width: 100%;
+    display: block;
+    float: none;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+}
+
+img.alignright,
+.wp-block-image .alignright,
+.wp-caption.alignright {
+  max-width: 50%;
+  height: auto;
+  margin: 0 0 25px 25px;
+
+  @media screen and (max-width: $bp-M) {
+    max-width: 100%;
+    display: block;
+    float: none;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+}
+
+img.aligncenter,
+.wp-caption.aligncenter {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.wp-caption {
+  margin: 10px 0;
+  padding: 4px 0 0;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+
+  .wp-caption-text {
+    padding: 0 4px 5px;
+    font-size: rem(12);
+    line-height: 1.5;
+  }
+}
+
+.wp-block-calendar {
+  a {
+    color: $color-3;
+    font-weight: bold;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+      text-decoration: none;
+      color: $color-1;
+    }
+  }
+}
+
+blockquote {
+  margin: 20px 0;
+  padding: 0 0 0 20px;
+  width: 90%;
+  display: inline-block;
+  text-align: left;
+  border-left: 3px solid $color-4;
+  font-family: $font-base;
+  font-size: rem(16);
+  color: $color-8;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+cite {
+  font-family: $font-base;
+  font-style: italic;
+  font-size: rem(16);
+  color: $color-4;
+}
+
+iframe {
+  max-width: 100%;
+}

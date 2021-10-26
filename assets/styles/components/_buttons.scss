@@ -1,0 +1,109 @@
+@mixin btn($color, $bg-c, $c-hover, $bg-hover, $arrow-h : $color-3) {
+  font-family: $font-base;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: rem(16);
+  display: inline-block;
+  letter-spacing: 1.92px;
+  color: $color;
+  text-transform: uppercase;
+  background-color: $bg-c;
+  border-radius: 10px;
+  transition: $transition-ease;
+
+  span {
+    position: relative;
+    border-color: $color;
+  }
+
+  svg {
+    margin-bottom: 2px;
+    margin-left: 3px;
+
+    path {
+      fill: $color;
+      transition: $transition-ease;
+
+      &:nth-child(1) {
+        transform: scaleX(0.75);
+        transform-origin: center;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        opacity: 0;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $c-hover;
+    background-color: $bg-hover;
+
+    span {
+      border-color: $c-hover;
+    }
+
+    svg {
+      path {
+        fill: $arrow-h;
+
+        &:nth-child(1) {
+          transform: none;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@mixin btn-fill() {
+  padding: 15px 42px 15px 16px;
+  min-width: 177px;
+  max-width: 244px;
+  position: relative;
+  height: auto;
+
+  @media (min-width: $bp-L) {
+    max-width: 100%;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+    line-height: rem(20);
+    margin-right: 5px;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 7px;
+  }
+}
+
+.btn-fill-yellow {
+  @include btn($color-8, $color-6, $color-8, $color-6);
+  @include btn-fill();
+}
+
+.btn-outline {
+  @include btn($color-3, transparent, $color-8, transparent, $color-8);
+
+  span {
+    padding-bottom: 2px;
+    display: inline-block;
+    border-bottom: 2px solid;
+  }
+
+  svg {
+    margin-left: -4px;
+  }
+}

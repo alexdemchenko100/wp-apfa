@@ -1,0 +1,226 @@
+/* stylelint-disable */
+.gform_wrapper {
+  &.gravity-theme {
+    h2 {
+      @extend .h4;
+
+      margin-bottom: 24px;
+      font-weight: 700;
+      color: $color-3;
+
+      @media (min-width: $bp-XL) {
+        margin-bottom: 20px;
+        letter-spacing: 0.4px;
+      }
+    }
+
+    form {
+      .gform_fields {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        .gfield {
+          &:last-of-type {
+            input,
+            textarea,
+            select {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        input,
+        textarea,
+        select {
+          margin-bottom: 0;
+          padding: 6px 15px;
+          -webkit-appearance: none;
+          appearance: none;
+          border-radius: 0;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          cursor: pointer;
+          transition: all 0.3s ease-out;
+          width: 100%;
+          font-size: rem(16);
+          line-height: 2;
+          color: $color-8;
+          border: 1px solid $color-3;
+          border-radius: 3px;
+          background-color: transparent;
+
+          @media (min-width: $bp-L) {
+            margin-bottom: 4px;
+            font-size: rem(18);
+            line-height: rem(36);
+          }
+
+          &:focus {
+            outline: none;
+            border: 1px solid $color-1;
+          }
+        }
+
+        select {
+          padding-right: 40px;
+          text-align-last: right;
+
+          @media (min-width: $bp-XL) {
+            padding-right: 57px;
+          }
+        }
+      }
+
+      .gfield_label {
+        @extend .h6;
+
+        margin-bottom: 4px;
+        color: $color-8;
+
+        @media (min-width: $bp-XL) {
+          margin-bottom: 0;
+          line-height: rem(20);
+        }
+      }
+
+      .ginput_container_select {
+        position: relative;
+
+        &::after {
+          content: "\f107";
+          font-family: 'FontAwesome';
+          position: absolute;
+          top: 3px;
+          right: 18px;
+          color: $color-7;
+          display: block;
+          height: 20px;
+          font-weight: bold;
+
+          @media (min-width: $bp-XL) {
+            top: 0;
+            transform: translateY(50%);
+          }
+        }
+      }
+
+      .ginput_container_textarea {
+        line-height: 0;
+
+        .gfield textarea.large,
+        textarea {
+          padding-top: 14px;
+          padding-bottom: 14px;
+          height: 180px !important;
+          resize: none;
+
+          @media (min-width: $bp-XL) {
+            height: 251px !important;
+          }
+        }
+      }
+
+      .gfield_required {
+        position: relative;
+
+        &::after {
+          content: '*';
+          left: -2px;
+          position: relative;
+          color: $color-8;
+        }
+
+        span {
+          display: none;
+        }
+      }
+
+      .gform_validation_container {
+        display: none;
+      }
+
+      .validation_error,
+      .validation_message {
+        padding: 0;
+        margin-top: 2px;
+        margin-bottom: 0;
+        font-size: rem(12);
+        font-weight: 700;
+        color: $color-9;
+        background: transparent;
+        border: none;
+
+        @media (min-width: $bp-XL) {
+          font-size: rem(14);
+        }
+      }
+
+      .gfield_error {
+        input,
+        textarea {
+          border-width: 2px;
+        }
+      }
+
+      .gform_footer {
+        margin: 0;
+        padding-top: 30px;
+        padding-bottom: 0;
+        text-align: center;
+
+        @media (min-width: $bp-L) {
+          padding-top: 36px;
+          text-align: left;
+        }
+
+        button {
+          margin: 0;
+          border: none;
+          min-width: 135px;
+
+          @media (min-width: $bp-L) {
+            min-width: 138px;
+          }
+
+          svg {
+            @media (min-width: $bp-L) {
+              margin-left: 9px;
+            }
+          }
+        }
+      }
+    }
+
+    .gform_validation_errors {
+      padding-left: 0;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+
+      h2 {
+        font-size: rem(14);
+        color: $color-9;
+
+        @media (min-width: $bp-XL) {
+          font-size: rem(16);
+        }
+
+        span.gform-icon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.gform_confirmation_message {
+  padding-top: 24px;
+  text-align: center;
+  color: $color-3;
+
+  @media (min-width: $bp-L) {
+    padding-top: 65px;
+  }
+}
+/* stylelint-enable */
