@@ -36,8 +36,6 @@ $sponsors	  = get_field('sponsors');
 					<?php endif; ?>
 					<?php if ( $item['sponsors'] ) { ?>
 						<div class="sponsor-subitem">
-							<div class="swiper-container">
-								<div class="swiper-wrapper">
 							<?php foreach ( $item['sponsors'] as $slider ) {
 								?>
 								<?php if ( $slider['logo'] && $slider['url'] ) : ?>
@@ -48,14 +46,8 @@ $sponsors	  = get_field('sponsors');
 
 								<?php
 							} ?>
-								</div>
-
-								<?php if (count($item['sponsors'] ) > 1 ) {
-									?> <div class="swiper-button-prev"></div>
-									<div class="swiper-button-next"></div>  <?php
-								}?>
-							</div>
-						</div> <?php
+						</div>
+					<?php
 					}
 					?>
 					<?php

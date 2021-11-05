@@ -29,6 +29,7 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.15;
+    z-index: 1;
 
     @media (min-width: $bp-S) {
       height: calc(100% - 100px);
@@ -47,17 +48,16 @@
   }
 
   &__block {
-    padding: 0 15px;
+    padding: 0 20px;
     width: 100%;
     max-width: 2400px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 
-    @media (min-width: 560px) {
-      padding: 0 15px 0 115px;
-    }
-
-    @media (min-width: $bp-6XL) {
-      padding: 0 15px 0 360px;
+    @media (min-width: $bp-M) {
+      padding-left: 40px;
+      padding-right: 40px;
     }
 
     .sponsor-item {
@@ -69,82 +69,11 @@
 
       .sponsor-subitem {
         padding-bottom: 60px;
-
-        .swiper-container {
-          width: 100%;
-          overflow: visible;
-
-          .swiper-button-disabled {
-            pointer-events: inherit;
-            cursor: context-menu;
-          }
-
-          .swiper-button-next,
-          .swiper-button-prev {
-            display: none;
-
-            &::after,
-            &::before {
-              content: none;
-              display: none;
-            }
-
-            @media (min-width: 560px) {
-              width: 44px;
-              height: 44px;
-              opacity: 1;
-              border-radius: 100%;
-              background-image: url("../../images/sponsor-arrow.svg");
-              background-size: contain;
-              background-position: center;
-              position: absolute;
-              display: block;
-              top: inherit;
-              top: 50%;
-              transition: $transition-ease;
-
-              &::before {
-                position: absolute;
-                display: block;
-                content: '';
-                width: 80px;
-                height: 300%;
-                left: 50%;
-                top: 50%;
-                transform: translate3d(-50%, -50%, 0);
-              }
-
-              &:hover {
-                opacity: 0.6;
-              }
-            }
-          }
-
-          .swiper-button-prev {
-            @media (min-width: 560px) {
-              left: -95px;
-            }
-
-            @media (min-width: $bp-6XL) {
-              left: -335px;
-            }
-          }
-
-          .swiper-button-next {
-            transform: rotate(180deg);
-
-            @media (min-width: $bp-L) {
-              right: 20px;
-            }
-          }
-        }
-
-        .swiper-wrapper {
-          @media (max-width: 599px) {
-            flex-wrap: wrap;
-            justify-content: center;
-          }
-        }
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-flow: row wrap;
+        margin: 0 -10px;
 
         .swiper-slide {
           background: $color-2;
@@ -155,7 +84,9 @@
           align-items: center;
           margin-bottom: 20px;
           max-width: 280px;
-          width: 100%;
+          width: calc(20% - 20px);
+          margin-left: 10px;
+          margin-right: 10px;
 
           @media (min-width: $bp-L) {
             height: 184px;
