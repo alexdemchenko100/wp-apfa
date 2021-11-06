@@ -78,7 +78,7 @@ $slides				= get_field( 'slider' );
 		<div class="<?php echo $slug; ?>__bg"></div>
 
 		<?php if ( is_array( $video_repeater ) && $bottom_element == 'videos' ) : ?>
-			<div class="<?php echo $slug; ?>__videos">
+			<div class="<?php echo $slug; ?>__videos <?php if (sizeof($video_repeater) == 1) {?>one-video<?php } ?>">
 				<?php foreach ( $video_repeater as $video ) : ?>
 					<?php
 					$bg = is_array( $video['video_preview'] ) ? 'style="background-image: url(' . $video['video_preview']['url'] . ')"' : '';
