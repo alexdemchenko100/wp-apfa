@@ -45,9 +45,7 @@ $form_id	  	   = get_field( 'choices' );
 				<?php endif; ?>
 		</div>
 		<?php if ( $map ) : ?>
-			<div class="contact-map">
-				<?php echo $map; ?>
-			</div>
+			<?php echo $map; ?>
 		<?php endif; ?>
 		<?php if ( $form_id ) : ?>
 			<div class="contact-form">
@@ -55,4 +53,27 @@ $form_id	  	   = get_field( 'choices' );
 			</div>
 		<?php endif; ?>
 	</div>
+	<script>
+		var map;
+		function initMap() {
+			map = new google.maps.Map(document.getElementById("contact-gmap"), {
+				center: new google.maps.LatLng(53.538573, -113.505151),
+				zoom: 16,
+			});
+
+			var icon = {
+        url: "https://afpa2021.wpengine.com/wp-content/uploads/2021/11/afpa-map-marker.svg",
+        anchor: new google.maps.Point(25,50),
+        scaledSize: new google.maps.Size(80,40)
+    	}
+			// Create markers.
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(53.538573, -113.505151),
+				icon: icon,
+				map: map,
+			});
+		}
+</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB6xN9ffUzyPTlA1iTQRi4dP21TZOu7wo&callback=initMap&v=weekly&channel=2" async ></script>
 </section>
