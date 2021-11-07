@@ -5,6 +5,7 @@
   z-index: 2;
   position: relative;
   transition: $transition-gradient;
+  overflow: hidden;
 
   &.section-bg-pattern {
     .multiple-info__bg {
