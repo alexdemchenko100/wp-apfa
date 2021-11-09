@@ -75,5 +75,5 @@ $form_id	  	   = get_field( 'choices' );
 		}
 </script>
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB6xN9ffUzyPTlA1iTQRi4dP21TZOu7wo&callback=initMap&v=weekly&channel=2" async ></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClJB5uMJirXNzb_cFslMeZqL8KWhY7SA4&callback=initMap&v=weekly&channel=2" async ></script>
 </section>
