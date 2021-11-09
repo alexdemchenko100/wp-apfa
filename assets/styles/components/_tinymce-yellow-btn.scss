@@ -1,0 +1,29 @@
+.tinymce-yellow-button {
+  color: #1e2d24 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 48px 14px 16px;
+  line-height: 1.25rem;
+  border-bottom: none !important;
+
+  &::after {
+    content: '';
+    display: block;
+    background-repeat: no-repeat;
+    background-image: url('../../images/arrow.svg');
+    right: 4px;
+    width: 30px;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover::after {
+    background-image: url('../../images/hover.svg');
+    right: 7px;
+  }
+}
