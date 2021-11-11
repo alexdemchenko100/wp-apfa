@@ -48,18 +48,26 @@
     opacity: 0.15;
     z-index: -1;
 
-    @media (min-width: $bp-S) {
-      background-image: url("../../images/artwork.svg");
-    }
-
     &::before {
       content: '';
       width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, rgba($color-7, 1) 30%, rgba($color-7, 0.7) 50%, rgba($color-7, 0) 100%);
+      height: 200vw;
       position: absolute;
       top: 0;
       left: 0;
+      background: linear-gradient(180deg, rgba($color-7, 1) 30%, rgba($color-7, 0.7) 50%, rgba($color-7, 0) 100%);
+      background-image: none;
+      background-repeat: no-repeat;
+      background-size: 90% auto;
+      background-position: top left;
+    }
+
+    @media (min-width: $bp-S) {
+      background-image: none;
+
+      &::before {
+        background-image: url("../../images/wood-grain.svg");
+      }
     }
   }
 
@@ -246,4 +254,8 @@
       }
     }
   }
+}
+
+#intro-block_6141c009485f3 {
+  overflow: hidden;
 }
