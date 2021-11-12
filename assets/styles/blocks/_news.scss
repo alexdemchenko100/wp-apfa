@@ -236,17 +236,3 @@
     }
   }
 }
-
-.news-archive__wrap {
-  margin: 0 auto;
-  max-width: 1110px;
-
-  .post-block {
-    width: 100%;
-    max-width: 397px;
-
-    @media (min-width: $bp-M) {
-      max-width: 100%;
-    }
-  }
-}
