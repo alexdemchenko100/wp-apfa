@@ -19,4 +19,7 @@ jQuery(document).ready(() => {
 	$('.ob').last().addClass('last');
 
 	AOS.init();
+	window.addEventListener('scroll', () => {
+		AOS.refresh()
+	}, false)
 });

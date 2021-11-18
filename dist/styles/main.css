@@ -18475,13 +18475,17 @@ body.logged-in.admin-bar .header {
 /* line 103, assets/styles/blocks/_hero.scss */
 
 .hero-video-bg video {
-  right: 0;
-  bottom: 0;
+  width: auto;
   min-width: 100%;
   min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-/* line 111, assets/styles/blocks/_hero.scss */
+/* line 114, assets/styles/blocks/_hero.scss */
 
 .hero__scroll {
   position: absolute;
@@ -18490,7 +18494,7 @@ body.logged-in.admin-bar .header {
 }
 
 @media (min-width: 768px) {
-  /* line 111, assets/styles/blocks/_hero.scss */
+  /* line 114, assets/styles/blocks/_hero.scss */
 
   .hero__scroll {
     bottom: 40px;
@@ -18498,7 +18502,7 @@ body.logged-in.admin-bar .header {
 }
 
 @media (min-width: 992px) {
-  /* line 111, assets/styles/blocks/_hero.scss */
+  /* line 114, assets/styles/blocks/_hero.scss */
 
   .hero__scroll {
     bottom: 70px;
@@ -18507,7 +18511,7 @@ body.logged-in.admin-bar .header {
 }
 
 @media (min-width: 1366px) {
-  /* line 111, assets/styles/blocks/_hero.scss */
+  /* line 114, assets/styles/blocks/_hero.scss */
 
   .hero__scroll {
     bottom: 109px;
@@ -18515,7 +18519,7 @@ body.logged-in.admin-bar .header {
   }
 }
 
-/* line 130, assets/styles/blocks/_hero.scss */
+/* line 133, assets/styles/blocks/_hero.scss */
 
 .hero__scroll a {
   display: block;

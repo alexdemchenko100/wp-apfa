@@ -7,7 +7,7 @@ const
 			let resourcesLinkSlider = $('.resources .swiper-container');
 			let afpaSlider = $('.afpa .swiper-container');
 			let multipleSlider = $('.multiple-info .swiper-container');
-			let sponsorSlider = $('.sponsor-item .swiper-container');
+			// let sponsorSlider = $('.sponsor-item .swiper-container');
 
             if (resourcesLinkSlider.length > 0) {
                 resourcesLinkSlider.each(function () {
@@ -109,43 +109,43 @@ const
 				});
 			}
 
-			if (sponsorSlider.length > 0 && $( window ).width() > 560 ) {
-				sponsorSlider.each(function () {
-					let sponsorSlider = new Swiper(this, {
-						slidesPerView: "auto",
-						spaceBetween: 16,
-						autoplayDisableOnInteraction: true,
-						centeredSlides: false,
-						allowTouchMove: true,
-						navigation: {
-							nextEl: '.swiper-button-next',
-							prevEl: '.swiper-button-prev',
-						},
-						breakpoints: {
-							768: {
-								slidesPerView: 'auto',
-								spaceBetween: 24,
-								allowTouchMove: true,
-								navigation: {
-									nextEl: '.swiper-button-next',
-									prevEl: '.swiper-button-prev',
-								},
-							},
-							1920: {
-								slidesPerView: 'auto',
-								spaceBetween: 32,
-								allowTouchMove: true,
-								navigation: {
-									nextEl: '.swiper-button-next',
-									prevEl: '.swiper-button-prev',
-								},
-							},
-						},
-					});
+			// if (sponsorSlider.length > 0 && $( window ).width() > 560 ) {
+			// 	sponsorSlider.each(function () {
+			// 		let sponsorSlider = new Swiper(this, {
+			// 			slidesPerView: "auto",
+			// 			spaceBetween: 16,
+			// 			autoplayDisableOnInteraction: true,
+			// 			centeredSlides: false,
+			// 			allowTouchMove: true,
+			// 			navigation: {
+			// 				nextEl: '.swiper-button-next',
+			// 				prevEl: '.swiper-button-prev',
+			// 			},
+			// 			breakpoints: {
+			// 				768: {
+			// 					slidesPerView: 'auto',
+			// 					spaceBetween: 24,
+			// 					allowTouchMove: true,
+			// 					navigation: {
+			// 						nextEl: '.swiper-button-next',
+			// 						prevEl: '.swiper-button-prev',
+			// 					},
+			// 				},
+			// 				1920: {
+			// 					slidesPerView: 'auto',
+			// 					spaceBetween: 32,
+			// 					allowTouchMove: true,
+			// 					navigation: {
+			// 						nextEl: '.swiper-button-next',
+			// 						prevEl: '.swiper-button-prev',
+			// 					},
+			// 				},
+			// 			},
+			// 		});
 
-					sponsorSlider.init();
-				});
-			}
+			// 		sponsorSlider.init();
+			// 	});
+			// }
 		},
 	};
 

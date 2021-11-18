@@ -91,7 +91,7 @@
 
     @media (min-width: $bp-S) {
       height: calc(100% - 500px);
-      background-image: url("../../images/artwork.svg");
+      background-image: url("../../images/wood-grain.svg");
     }
 
     &::before {
@@ -175,7 +175,7 @@
     }
 
     &__link {
-      padding-top: 11px;
+      margin-top: 11px;
 
       @media (min-width: $bp-XL) {
         margin-bottom: 7px;

@@ -22,7 +22,7 @@
 
       @media (min-width: $bp-S) {
         height: calc(100% - 500px);
-        background-image: url("../../images/artwork.svg");
+        background-image: url("../../images/wood-grain.svg");
       }
 
       &::before {
@@ -94,7 +94,7 @@
     @media (min-width: $bp-L) {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
     }
 
     @media (min-width: $bp-4XL) {
@@ -112,9 +112,10 @@
         flex-basis: 50%;
         margin: 0;
         max-width: none;
-      }
+        position: -webkit-sticky;
+        position: sticky;
+        top: 50px;
 
-      @media (min-width: $bp-L) {
         img {
           width: 100%;
         }
@@ -122,6 +123,8 @@
     }
 
     &__content {
+      overflow: hidden;
+
       @media (min-width: $bp-L) {
         flex-basis: 50%;
       }
@@ -242,6 +245,7 @@
   &__videos {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 50px 0 20px;
 
     @media (min-width: $bp-L) {
@@ -355,6 +359,28 @@
           width: 60px;
           margin-top: 5px;
           margin-bottom: -25px;
+        }
+      }
+    }
+
+    &.one-video {
+      @media (min-width: $bp-M) {
+        .video-block {
+          flex-basis: 80%;
+          height: 350px;
+        }
+      }
+      @media (min-width: $bp-L) {
+        .video-block {
+          flex-basis: 75%;
+          height: 400px;
+        }
+      }
+      @media (min-width: $bp-2XL) {
+        .video-block {
+          flex-basis: 70%;
+          height: 480px;
+          max-width: 960px;
         }
       }
     }
