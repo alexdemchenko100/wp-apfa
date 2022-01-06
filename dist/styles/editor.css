@@ -169,5 +169,11 @@
   max-width: none;
 }
 
+/* line 133, stdin */
+
+.mce-toolbar .mce-btn button {
+  line-height: 20px;
+}
+
 
 /*# sourceMappingURL=editor.css.map*/
