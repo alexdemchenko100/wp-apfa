@@ -157,9 +157,9 @@ function om_form_submit_button( $button, $form ) {
 	return "<button class='btn-fill-yellow gform_button' id='gform_submit_button_{$form['id']}'><span>{$button_text}</span>{$arrow}</button>";
 }
 
-add_action('admin_head', 'add_custom_tinymce_yellow_button');
+add_action('admin_head', 'gavickpro_add_my_tc_button');
 
-function add_custom_tinymce_yellow_button_plugin($plugin_array) {
+function gavickpro_add_tinymce_plugin($plugin_array) {
 	$plugin_array['yellow_button'] = get_template_directory_uri().'/assets/scripts/custom-tinymce-button.js';
 	return $plugin_array;
 }
@@ -170,7 +170,7 @@ function yellow_button($buttons) {
 	return $buttons;
 }
 
-function add_custom_tinymce_yellow_button() {
+function gavickpro_add_my_tc_button() {
 	global $typenow;
 	// check user permissions
 	if ( !current_user_can('edit_posts') && !current_user_can('edit_pages') ) {
@@ -181,7 +181,7 @@ function add_custom_tinymce_yellow_button() {
 			return;
 	// check if WYSIWYG is enabled
 	if ( get_user_option('rich_editing') == 'true') {
-			add_filter("mce_external_plugins", "add_custom_tinymce_yellow_button_plugin");
+			add_filter("mce_external_plugins", "gavickpro_add_tinymce_plugin");
 			add_filter("mce_buttons_2", "yellow_button");
 	}
 }

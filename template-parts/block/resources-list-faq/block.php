@@ -62,8 +62,8 @@ $list              = get_field( 'list' );
 											<div class="links-block">
 												<?php foreach ( $links_list as $link_item ) : ?>
 
-													<?php if ( $link_item['select_type'] == 'text_within' ) : ?>
-														<?php echo $link_item['text_within'] ?>
+													<?php if ( $link_item['select_type'] == 'text-within' ) : ?>
+														<?php echo $link_item['text-within'] ?>
 													<?php endif; ?>
 
 													<div class="links-block__items">
