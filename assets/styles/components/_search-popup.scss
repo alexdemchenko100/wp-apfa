@@ -1,0 +1,238 @@
+.search-popup {
+  display: none;
+  background-color: #1e2d24;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 300px;
+  min-height: calc(100vh - 150px);
+  flex: 1 0 auto;
+
+  &-content {
+    max-width: 1778px;
+    padding-left: 37px;
+    padding-right: 37px;
+    margin: 0 auto;
+  }
+
+  &-box-label {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #80b751;
+    margin-bottom: 40px;
+  }
+
+  &-box {
+    position: relative;
+
+    input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #e2ac33;
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 52px;
+      padding: 6px 0;
+      color: #fff;
+    }
+
+    &-close {
+      position: absolute;
+      top: 50%;
+      right: 0.5em;
+      color: #fff;
+      display: none;
+      align-items: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      z-index: 3;
+      transform: translateY(-50%);
+
+      &.show {
+        display: flex;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.12em;
+        margin-left: 0.6em;
+      }
+    }
+  }
+
+  &-down-arrow {
+    margin-top: 32px;
+    margin-bottom: 70px;
+    display: none;
+  }
+
+  &-result {
+    display: none;
+    background: #fbf7ee;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url('../../images/search-bottom-bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
+
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    &-left {
+      font-weight: bold;
+      font-size: 42px;
+      line-height: 52px;
+      color: #1e2d24;
+      width: 33.3%;
+      float: left;
+      max-width: 400px;
+    }
+
+    &-right {
+      width: 66.6%;
+      float: right;
+      border-top: 2px solid #1e2d24;
+
+      .page-header {
+        display: none;
+      }
+
+      .empty {
+        font-size: 24px;
+        margin: 2em 0;
+      }
+
+      .pagination {
+        text-align: right;
+        margin-top: 5em;
+
+        .page-numbers {
+          margin: 0 0.5em;
+          display: inline-flex;
+          padding: 0 0.2em;
+          color: #1e2e24;
+          justify-content: center;
+        }
+
+        .current {
+          border-bottom: 2px solid #1e2d24;
+        }
+      }
+
+      .article-search {
+        border-bottom: 2px solid #1e2d24;
+        padding: 30px 0;
+
+        h5 {
+          margin: 15px 0 18px;
+        }
+
+        .post-excerpt p {
+          margin-bottom: 30px;
+        }
+
+        .btn-outline {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $bp-L - 1px) {
+    &-box {
+      position: relative;
+
+      input {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+
+    &-down-arrow {
+      margin-bottom: 50px;
+    }
+
+    &-result {
+      padding-top: 70px;
+      padding-bottom: 70px;
+
+      &-left {
+        font-size: 28px;
+        line-height: 36px;
+        max-width: 280px;
+      }
+
+      &-right {
+        .article-search {
+          padding: 20px 0;
+
+          h5 {
+            margin: 12px 0 15px;
+          }
+
+          .post-excerpt p {
+            margin-bottom: 22px;
+          }
+
+          .btn-outline {
+            font-size: 14px;
+
+            svg {
+              height: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $bp-M - 1px) {
+    padding-top: 110px;
+
+    &-content {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &-box {
+      &-label {
+        margin-bottom: 20px;
+      }
+
+      input {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    &-result {
+      &-left {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 1em;
+        float: none;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      &-right {
+        width: 100%;
+        float: none;
+
+        .pagination {
+          margin-top: 3em;
+        }
+      }
+    }
+  }
+}

@@ -194,3 +194,17 @@ function my_toolbars( $toolbars )
 	// return $toolbars - IMPORTANT!
 	return $toolbars;
 }
+
+function paginateSearch(){
+	global $wp_query;
+	$searchPages = $wp_query -> max_num_pages;
+	$theBig = 999999999;
+	$paginateSearchArgs = array(
+		'base' => str_replace($theBig,'%#%', esc_url(get_pagenum_link($theBig))),
+		'format' => '?page = %#%',
+		'current' =>  max(1, get_query_var ('paged')),
+		'total' => $searchPages,
+	);
+	
+	echo paginate_links($paginateSearchArgs);
+}

@@ -33,7 +33,9 @@ get_header(); ?>
 
 					endwhile;
 
-					the_posts_navigation();
+					echo '<div class="pagination">';
+					paginateSearch();
+					echo '</div>';
 
 				else :
 

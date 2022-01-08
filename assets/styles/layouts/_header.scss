@@ -132,6 +132,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .icon-search,
+    .icon-close {
+      padding-top: 14px;
+      padding-right: 20px;
+      cursor: pointer;
+    }
+
+    .icon-close {
+      display: none;
+    }
+
+    @media (min-width: $bp-L) {
+      display: none;
+    }
   }
 }
 
