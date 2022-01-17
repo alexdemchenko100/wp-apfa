@@ -8,12 +8,12 @@
   order: 2;
 
   @media (min-width: $bp-L) {
-    margin-right: -23px;
     padding-left: 18px;
     padding-right: 0;
     order: 0;
     flex-grow: 1;
     position: static;
+    justify-content: flex-end;
   }
 
   &-collapse {
@@ -561,6 +561,38 @@
 
       span:not(.text) {
         background-color: $color-2;
+      }
+    }
+  }
+
+  .nav-primary-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .nav-search {
+      .icon-search, .icon-close {
+        cursor: pointer;
+        padding: 15px 16px 11px;
+        display: block;
+
+        &:hover {
+          path {
+            stroke: $color-6;
+          }
+        }
+      }
+  
+      .icon-close {
+        display: none;
+      }
+    }
+
+    @media (max-width: $bp-L - 1px) {
+      width: 100%;
+
+      .nav-search {
+        display: none;
       }
     }
   }

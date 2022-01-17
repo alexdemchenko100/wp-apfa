@@ -36,21 +36,27 @@ $hero_logo_hover	= get_field( 'hero_logo_hover', 'option' );
 				<?php endif; ?>
 			</a>
 			<nav class="nav-primary header__nav navbar navbar-expand-lg">
-				<?php
-				if ( has_nav_menu( 'primary' ) ) :
-					wp_nav_menu(
-						[
-							'theme_location'  => 'primary',
-							'menu_id'         => 'primary-menu',
-							'container_class' => 'collapse navbar-collapse',
-							'container_id'    => 'primaryNavBar',
-							'menu_class'      => 'navbar-nav',
-							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'walker'          => new Afpa_Navwalker(),
-						]
-					);
-				endif;
-				?>
+				<div class="nav-primary-row">
+					<?php
+					if ( has_nav_menu( 'primary' ) ) :
+						wp_nav_menu(
+							[
+								'theme_location'  => 'primary',
+								'menu_id'         => 'primary-menu',
+								'container_class' => 'collapse navbar-collapse',
+								'container_id'    => 'primaryNavBar',
+								'menu_class'      => 'navbar-nav',
+								'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'walker'          => new Afpa_Navwalker(),
+							]
+						);
+					endif;
+					?>
+					<div class="nav-search">
+						<span class="icon-search"><?php get_template_part( 'template-parts/icon-search' ); ?></span>
+						<span class="icon-close"><?php get_template_part( 'template-parts/icon-close' ); ?></span>
+					</div>
+				</div>
 				<?php if ( $socials && is_array( $socials ) ) : ?>
 					<div class="header__bottom">
 						<?php get_template_part( 'template-parts/socials' ); ?>
@@ -58,6 +64,8 @@ $hero_logo_hover	= get_field( 'hero_logo_hover', 'option' );
 				<?php endif; ?>
 			</nav>
 			<div class="header__btns">
+				<span class="icon-search"><?php get_template_part( 'template-parts/icon-search' ); ?></span>
+				<span class="icon-close"><?php get_template_part( 'template-parts/icon-close' ); ?></span>
 				<div class="navbar-toggler-wrap">
 					<button class="navbar-toggler" type="button" data-name="menu" data-toggle="collapse"
 							data-target="#primaryNavBar"
@@ -72,4 +80,25 @@ $hero_logo_hover	= get_field( 'hero_logo_hover', 'option' );
 		</div>
 	</div>
 </header>
+<div class="search-popup">
+	<div class="search-popup-content">
+		<div class="search-popup-box-label">Search</div>
+		<div class="search-popup-box">
+			<input type="text" placeholder="Start typing to search" class="search-popup-input" />
+			<div class="search-popup-box-close">
+				<?php get_template_part( 'template-parts/icon-close' ); ?>
+				<span>clear</span>
+			</div>
+		</div>
+		<div class="search-popup-down-arrow">
+			<?php get_template_part( 'template-parts/icon-down-arrow' ); ?>
+		</div>
+	</div>
+	<div class="search-popup-result">
+		<div class="search-popup-content">
+			<div class="search-popup-result-left">Displaying results for <span class="search-keyword"></span></div>
+			<div class="search-popup-result-right"></div>
+		</div>
+	</div>
+</div>
 <main id="content" class="site-content <?php echo ! is_front_page() ? 'interior-page' : ''; ?>">

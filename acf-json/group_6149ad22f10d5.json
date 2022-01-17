@@ -132,7 +132,8 @@
                                     "choices": {
                                         "pdf": "PDF",
                                         "video": "Video",
-                                        "link": "Link"
+                                        "link": "Link",
+                                        "text-within": "Text"
                                     },
                                     "default_value": false,
                                     "allow_null": 0,
@@ -215,9 +216,37 @@
                                         "id": ""
                                     },
                                     "return_format": "array"
+                                },
+                                {
+                                    "key": "field_61785f387235d",
+                                    "label": "Text Within",
+                                    "name": "text-within",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_6149ad9c1b0be",
+                                                "operator": "==",
+                                                "value": "text-within"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "full",
+                                    "media_upload": 1,
+                                    "delay": 1
                                 }
                             ]
-                        }
+                        },
+                        false
                     ]
                 }
             ]
@@ -240,5 +269,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632298624
+    "modified": 1635278843
 }

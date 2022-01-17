@@ -175,3 +175,75 @@ $(window).resize(function () {
 		$('header').removeClass('open-nav');
 	}
 });
+
+$('.nav-search .icon-search').on('click', function () {
+	$(this).hide();
+	$('.nav-search .icon-close').show();
+	$('.search-popup').show();
+	$('main').hide();
+	$('.navbar-toggler-wrap').hide();
+});
+
+$('.nav-search .icon-close').on('click', function () {
+	$(this).hide();
+	$('.nav-search .icon-search').show();
+	$('.search-popup').hide();
+	$('main').show();
+	$('.navbar-toggler-wrap').show();
+});
+
+
+$('.header__btns .icon-search').on('click', function () {
+	$(this).hide();
+	$('.header__btns .icon-close').show();
+	$('.search-popup').show();
+	$('main').hide();
+	$('.navbar-toggler-wrap').hide();
+});
+
+$('.header__btns .icon-close').on('click', function () {
+	$(this).hide();
+	$('.header__btns .icon-search').show();
+	$('.search-popup').hide();
+	$('main').show();
+	$('.navbar-toggler-wrap').show();
+});
+
+$('.search-popup-box-close').on('click', function() {
+	$('.search-popup-input').val('');
+	$(this).hide();
+	$('.search-popup-result').hide();
+	$('.search-popup-down-arrow').hide();
+})
+
+function fetchData(page, value) {
+	fetch('/page/' + page + '/?s=' + value)
+		.then(response => response.text())
+		.then(html => {
+			var parser = new DOMParser();
+			var doc = parser.parseFromString(html, 'text/html');
+			$('.search-popup-result').show();
+			$('.search-popup-down-arrow').show();
+			var search_count = $(doc).find('article').length;
+			if (search_count > 0) {
+				$('.search-popup-result-right').html($(doc).find('#main').html());
+				$('.search-popup .page-numbers').click(function(e) {
+					e.preventDefault();
+					var page = $(this).html();
+					var value = $('.search-popup-input').val();
+					fetchData(page, value);
+				})
+			} else {
+				$('.search-popup-result-right').html('<div class="text-center empty">No result</div>');
+			}
+		});
+}
+
+$('.search-popup-input').on('input', function(e) {
+	var value = e.target.value;
+	if (value) {
+		$('.search-popup-box-close').show();
+		$('.search-keyword').html("'" + value + "'");
+		fetchData(1, value);
+	}
+})
