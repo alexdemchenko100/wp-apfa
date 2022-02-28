@@ -132,6 +132,13 @@
 
     a {
       display: block;
+
+      @media (min-width: $bp-L) {
+        svg {
+          height: 45px;
+          width: auto;
+        }
+      }
     }
   }
 }

@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 300px;
+  padding-top: 150px;
   min-height: calc(100vh - 150px);
   flex: 1 0 auto;
 
@@ -22,7 +22,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #80b751;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   &-box {
@@ -68,7 +68,7 @@
 
   &-down-arrow {
     margin-top: 32px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     display: none;
   }
 
@@ -159,7 +159,7 @@
     }
 
     &-down-arrow {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
     &-result {
